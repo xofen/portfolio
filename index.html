@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>M i r i l l i</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <header class="cabeca">
+            <h1 onclick="backtoHome()" class="cabecalho">Mirilli</h1>
+        </header>
+        <main id="frente" class="frente">
+            <div class="autoretrato"></div>
+            <nav class="home">
+                <button onclick="goToSection('bio')" id="bttnBio" class="bttn"><p>bio</p></button>
+                <button onclick="goToSection('cur')" id="bttnCur" class="bttn"><p>currículo</p></button>
+                <button onclick="goToSection('por')" id="bttnPor" class="bttn"><p>portfólio</p></button>
+                <button onclick="goToSection('con')" id="bttnCon" class="bttn"><p>contato</p></button>
+            </nav>
+        </main>
+        <main id="verso" class="verso">
+            <div class="informacoes"></div>
+            <nav class="infos">
+                <button onclick="showContent('bio')" id="bttnbio" class="bttnInfos"><p>bio</p></button>
+                <button onclick="showContent('cur')" id="bttncur" class="bttnInfos"><p>currículo</p></button>
+                <button onclick="showContent('por')" id="bttnpor" class="bttnInfos"><p>portfólio</p></button>
+                <button onclick="showContent('con')" id="bttncon" class="bttnInfos"><p>contato</p></button>
+            </nav>
+            <section class="conteudo">
+                <div id="bio">
+                    <p>BIOGRAFIA</p>
+                </div>
+                <div id="cur">
+                    <p>CURRÍCULO</p>
+                </div>
+                <div id="por">
+                    <p>PORTFÓLIO</p>
+                </div>
+                <div id="con">
+                    <p>CONTATO</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>ver.-0.0.2(2022)</p>
+        </footer>
+    </body>
+</html>
