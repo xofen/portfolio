@@ -9,18 +9,16 @@
     --frame-w: 500px;
     --frame-h: 700px;
     --border: 2px solid;
+    --bg-color: #FFFDD0;
 }
 
 html {
+    display: flex;
     font-size: 18px;
     text-align: center;
-    display: flex;
     justify-content: center;
     min-height: 100%;
-}
-
-body {
-    background-color: white;
+    background-color: var(--bg-color);
 }
 
 
@@ -28,52 +26,48 @@ body {
 header {
     display: flex;
     justify-content: center;
-    padding-top: 5%;
+    padding-top: 15px;
 }
 
 .cabecalho {
+    color: darkred;
     letter-spacing: 2px;
     text-decoration: none;
-    color: darkred;
-    cursor: pointer;
     max-width: max-content;
+    cursor: pointer;
 }
 
-
+.cabecalho:hover {
+    color: white;
+    -webkit-text-stroke: 1px red;
+}
 
 /* _____ FRENTE _____ */
 main.frente {
     display: inline-grid;
 }
 
-
 .autoretrato {
     grid-area: 1 / 1;
-
     width: var(--frame-w);
     height: var(--frame-h);
-
     background-image: var(--bg);
     background-position: center;
     background-size: contain;
-
     border: var(--border);
-
     transition: filter 600ms ease-out;
 }
 
 main.frente:hover .autoretrato {
     z-index: -1;
     filter: invert(2);
-    border-color: white;
+    border-color: var(--bg-color);
     transition: filter 400ms ease-in;
 }
 
 nav.home {
     grid-area: 1 / 1;
-
     display: grid;
-
     font-family: monospace;
     font-weight: bold;
 }
@@ -85,20 +79,19 @@ button.bttn {
     cursor: pointer;
 }
 
+button.bttn:hover {
+    background: #FFFDD0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    opacity: 1;
+}
+
 button.bttn p {
     font-size: 1.5rem;
     font-family: monospace;
     font-weight: bolder;
     letter-spacing: 3px;
 }
-
-button.bttn:hover {
-    background: white;
-    border-top: var(--border);
-    border-bottom: var(--border);
-    opacity: 1;
-}
-
 
 
 /* _____ VERSO _____ */
@@ -108,26 +101,20 @@ main.verso {
 
 .informacoes {
     grid-area: 1 / 1;
-
     width: var(--frame-w);
     height: var(--frame-h);
-
-    /* background-image: var(--bg); */
-    background-position: center;
-    background-size: contain;
-
     border: var(--border);
     border-right: none;
-
-    transition: filter 400ms ease;
 }
 
 section {
     grid-area: 1 / 1;
     padding-left: 20px;
-
     text-align: left;
     letter-spacing: 0.05rem;
+    width: 53ch;
+    letter-spacing: .05em;
+    line-height: 1.3rem;
 }
 
 #bio {
@@ -146,25 +133,30 @@ section {
     display: none;
 }
 
+#con img {
+    height: 310px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
 nav.infos {
     grid-area: 1 / 2;
-
     display: grid;
     gap: 2px;
-
     max-height: 100px;
     min-width: 120px;
-
     padding-left: 2px;
 }
 
 button.bttnInfos {
     background: lightgreen;
     border: var(--border);
-
     cursor: pointer;
-
     letter-spacing: 0.05em;
+}
+
+button.bttnInfos:hover {
+    text-transform: uppercase;
 }
 
 button.bttnInfos p {
@@ -172,19 +164,42 @@ button.bttnInfos p {
     font-weight: bolder;
 }
 
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer:hover {
+    background: black;
+}
 
 @media only screen and (max-height: 760px) {
     :root {
-        --frame-w: 375px;
-        --frame-h: 525px;
+        --frame-w: 425px;
+        --frame-h: 515px;
     }
 
     html {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     header {
         padding-top: 0;
+        height: 70px;
+    }
+
+    section {
+        width: 55ch;
+        line-height: 1.15em;
+    }
+
+    #con img {
+        height: 230px;
+        padding-top: 15px;
     }
 
     button.bttnInfos {

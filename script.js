@@ -1,3 +1,20 @@
+function changeText(){
+    fetch("texto.json").then(Response => Response.json().then(data => {
+        document.getElementById("bio").innerHTML = data.Biografia.texto;
+    }) )
+    fetch("texto.json").then(Response => Response.json().then(data => {
+        document.getElementById("cur").innerHTML = data.Curriculo.texto;
+    }) )
+    fetch("texto.json").then(Response => Response.json().then(data => {
+        document.getElementById("por").innerHTML = data.Portfolio.texto;
+    }) )
+    fetch("texto.json").then(Response => Response.json().then(data => {
+        document.getElementById("con").innerHTML = data.Contato.texto;
+    }) )
+}
+changeText();
+
+
 function showContent(section) {
     let secoes = ['bio', 'cur', 'por', 'con'];
     const codigo = 'bttn' + section;
