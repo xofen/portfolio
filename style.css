@@ -5,7 +5,7 @@
 }
 
 :root {
-    --bg: url('imagens/auto_retrato.jpg');
+    --bg: url('imagens/auto_retrato.webp');
     --frame-w: 500px;
     --frame-h: 700px;
     --border: 2px solid;
@@ -15,6 +15,7 @@
 html {
     display: flex;
     font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     justify-content: center;
     min-height: 100%;
@@ -80,7 +81,7 @@ button.bttn {
 }
 
 button.bttn:hover {
-    background: #FFFDD0;
+    background: var(--bg-color);
     border-top: var(--border);
     border-bottom: var(--border);
     opacity: 1;
