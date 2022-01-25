@@ -178,7 +178,7 @@ footer:hover {
     background: black;
 }
 
-@media only screen and (max-height: 760px) {
+@media only screen and (max-width: 1400px) {
     :root {
         --frame-w: 425px;
         --frame-h: 515px;
@@ -212,31 +212,50 @@ footer:hover {
     }
 }
 
-@media only screen and (min-height: 1500px) {
+@media only screen and (max-width: 560px) {
     :root {
-        --frame-w: 1150px;
-        --frame-h: 1550px;
-        --border: 6px solid;
+        --frame-w: 315px;
+        --frame-h: 450px;
     }
 
     html {
-        font-size: 46px;
+        font-size: 18px;
     }
 
     header {
-        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    .informacoes {
+        grid-area: 2 / 1;
+        height: 820px;
+    }
+
+    section {
+        grid-area: 2 / 1;
+        width: 33ch;
+        letter-spacing: normal;
+        line-height: 1.2em;
+        padding-left: 4%;
     }
 
     nav.infos {
-        gap: 6px;
+        grid-area: 1 / 1;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 105px;
+        padding-left: 0;
+        gap: 5px;
     }
 
     button.bttnInfos {
-        font-size: .9em;
-        min-width: 350px;
+        letter-spacing: .3em;
+        font-size: .7em;
     }
 
-    footer {
-        font-size: .9rem;
+    #con img {
+        height: 310px;
+        padding-left: 35px;
+        padding-top: 20px;
     }
 }
