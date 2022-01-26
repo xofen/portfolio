@@ -45,7 +45,7 @@ header {
 
 /* _____ FRENTE _____ */
 main.frente {
-    display: -ms-inline-grid;
+    display: inline-grid;
 }
 
 .autoretrato {
@@ -178,7 +178,7 @@ footer:hover {
 @media only screen and (max-width: 1400px) {
     :root {
         --frame-w: 425px;
-        --frame-h: 515px;
+        --frame-h: 520px;
     }
 
     html {
@@ -208,19 +208,18 @@ footer:hover {
     }
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (max-width: 450px) {
     :root {
-        --frame-w: 925px;
-        --frame-h: 1215px;
-        --border: 5px solid;
+        --frame-w: 365px;
+        --frame-h: 515px;
     }
 
     html {
-        font-size: 3.5em;
+        font-size: 1.2rem;
     }
 
     main.verso {
-        display: grid;
+        display: none;
         height: max-content;
         border: none;
     }
@@ -229,23 +228,23 @@ footer:hover {
         grid-area: 1 / 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        gap: 5px;
         padding: 0px;
     }
 
     section {
         grid-area: 2 / 1;
         width: 36ch;
-        margin-top: 160px;
+        margin-top: 10px;
         border-left: var(--border);
         border-bottom: var(--border);
-        padding-left: 30px;
+        padding-left: 10px;
     }
 
     #con img {
-        height: 730px;
+        height: 230px;
         padding-top: 15px;
-        padding-left: 150px;
-        margin-bottom: 50px;
+        padding-left: 50px;
+        margin-bottom: 20px;
     }
 }
