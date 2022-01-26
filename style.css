@@ -45,7 +45,7 @@ header {
 
 /* _____ FRENTE _____ */
 main.frente {
-    display: inline-grid;
+    display: -ms-inline-grid;
 }
 
 .autoretrato {
@@ -98,9 +98,6 @@ button.bttn p {
 /* _____ VERSO _____ */
 main.verso {
     display: none;
-}
-
-.informacoes {
     grid-area: 1 / 1;
     width: var(--frame-w);
     height: var(--frame-h);
@@ -146,7 +143,7 @@ nav.infos {
     gap: 2px;
     max-height: 100px;
     min-width: 120px;
-    padding-left: 2px;
+    padding-left: 35px;
 }
 
 button.bttnInfos {
@@ -190,7 +187,6 @@ footer:hover {
 
     header {
         padding-top: 0;
-        height: 70px;
     }
 
     section {
@@ -212,50 +208,44 @@ footer:hover {
     }
 }
 
-@media only screen and (max-width: 560px) {
+@media (max-aspect-ratio: 3/2) {
     :root {
-        --frame-w: 315px;
-        --frame-h: 450px;
+        --frame-w: 925px;
+        --frame-h: 1215px;
+        --border: 5px solid;
     }
 
     html {
-        font-size: 18px;
+        font-size: 3.5em;
     }
 
-    header {
-        padding-bottom: 80px;
-    }
-
-    .informacoes {
-        grid-area: 2 / 1;
-        height: 820px;
-    }
-
-    section {
-        grid-area: 2 / 1;
-        width: 33ch;
-        letter-spacing: normal;
-        line-height: 1.2em;
-        padding-left: 4%;
+    main.verso {
+        display: grid;
+        height: max-content;
+        border: none;
     }
 
     nav.infos {
         grid-area: 1 / 1;
-        display: inline-grid;
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-bottom: 105px;
-        padding-left: 0;
-        gap: 5px;
+        gap: 8px;
+        padding: 0px;
     }
 
-    button.bttnInfos {
-        letter-spacing: .3em;
-        font-size: .7em;
+    section {
+        grid-area: 2 / 1;
+        width: 36ch;
+        margin-top: 160px;
+        border-left: var(--border);
+        border-bottom: var(--border);
+        padding-left: 30px;
     }
 
     #con img {
-        height: 310px;
-        padding-left: 35px;
-        padding-top: 20px;
+        height: 730px;
+        padding-top: 15px;
+        padding-left: 150px;
+        margin-bottom: 50px;
     }
 }
