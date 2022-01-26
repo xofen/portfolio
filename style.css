@@ -208,9 +208,9 @@ footer:hover {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 660px) {
     :root {
-        --frame-w: 395px;
+        --frame-w: 365px;
         --frame-h: 515px;
     }
 
@@ -234,7 +234,7 @@ footer:hover {
 
     section {
         grid-area: 2 / 1;
-        width: 47ch;
+        width: 43ch;
         margin-top: 10px;
         border-left: var(--border);
         border-bottom: var(--border);
