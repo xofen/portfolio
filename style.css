@@ -18,7 +18,9 @@ html {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     justify-content: center;
-    min-height: 100%;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
     background-color: var(--bg-color);
 }
 
@@ -190,7 +192,7 @@ footer:hover {
     }
 
     section {
-        width: 55ch;
+        width: 50ch;
         line-height: 1.15em;
     }
 
@@ -215,7 +217,7 @@ footer:hover {
     }
 
     html {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     main.verso {
