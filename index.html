@@ -2,12 +2,12 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8" lang="pt-br">
-        <meda name="description" content="Portfólio de Pedro Mirilli ou um Cartão de Visitas Digital.">
+        <meta name="description" content="Portfólio de Pedro Mirilli ou um Cartão de Visitas Digital.">
         <meta Content-Security-Policy: default-src 'none'; script-src 'self'; img-src data: 'self'; style-src 'self' 'unsafe-inline'; font-src data: 'self'; object-src data:; base-uri 'none'; form-action 'none'; worker-src 'self'; connect-src 'self'>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>M i r i l l i : Portfólio</title>
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="script.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <header class="cabeca">
@@ -16,18 +16,18 @@
         <main id="frente" class="frente">
             <div class="autoretrato"></div>
             <nav class="home">
-                <button onclick="goToSection('bio')" id="bttnBio" class="bttn"><p>bio</p></button>
-                <button onclick="goToSection('cur')" id="bttnCur" class="bttn"><p>currículo</p></button>
-                <button onclick="goToSection('por')" id="bttnPor" class="bttn"><p>portfólio</p></button>
-                <button onclick="goToSection('con')" id="bttnCon" class="bttn"><p>contato</p></button>
+                <button onclick="goToSection('bio')" id="bttnBio" class="bttn">bio</button>
+                <button onclick="goToSection('cur')" id="bttnCur" class="bttn">currículo</button>
+                <button onclick="goToSection('por')" id="bttnPor" class="bttn">portfólio</button>
+                <button onclick="goToSection('con')" id="bttnCon" class="bttn">contato</button>
             </nav>
         </main>
         <main id="verso" class="verso">
             <nav class="infos">
-                <button onclick="showContent('bio')" id="bttnbio" class="bttnInfos"><p>bio</p></button>
-                <button onclick="showContent('cur')" id="bttncur" class="bttnInfos"><p>currículo</p></button>
-                <button onclick="showContent('por')" id="bttnpor" class="bttnInfos"><p>portfólio</p></button>
-                <button onclick="showContent('con')" id="bttncon" class="bttnInfos"><p>contato</p></button>
+                <button onclick="showContent('bio')" id="bttnbio" class="bttnInfos">bio</button>
+                <button onclick="showContent('cur')" id="bttncur" class="bttnInfos">currículo</button>
+                <button onclick="showContent('por')" id="bttnpor" class="bttnInfos">portfólio</button>
+                <button onclick="showContent('con')" id="bttncon" class="bttnInfos">contato</button>
             </nav>
             <section class="conteudo">
                 <script src="texto.json"></script>

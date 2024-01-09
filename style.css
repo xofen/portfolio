@@ -89,7 +89,7 @@ button.bttn:hover {
     opacity: 1;
 }
 
-button.bttn p {
+button.bttn {
     font-size: 1.5rem;
     font-family: monospace;
     font-weight: bolder;
@@ -143,9 +143,9 @@ nav.infos {
     grid-area: 1 / 2;
     display: grid;
     gap: 2px;
-    max-height: 100px;
-    min-width: 120px;
-    padding-left: 35px;
+    max-height: 150px;
+    min-width: 150px;
+    padding-left: 25px;
 }
 
 button.bttnInfos {
@@ -153,15 +153,12 @@ button.bttnInfos {
     border: var(--border);
     cursor: pointer;
     letter-spacing: 0.05em;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 button.bttnInfos:hover {
     text-transform: uppercase;
-}
-
-button.bttnInfos p {
-    font-family: monospace;
-    font-weight: bolder;
 }
 
 footer a {
@@ -177,7 +174,7 @@ footer:hover {
     background: black;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1660px) {
     :root {
         --frame-w: 425px;
         --frame-h: 520px;
@@ -196,6 +193,10 @@ footer:hover {
         line-height: 1.15em;
     }
 
+    nav.infos {
+        padding-left: 15px;
+    }
+
     #con img {
         height: 230px;
         padding-top: 15px;
@@ -210,14 +211,18 @@ footer:hover {
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 740px) {
     :root {
-        --frame-w: 365px;
-        --frame-h: 515px;
+        --frame-w: 90vw;
+        --frame-h: 120vw;
     }
 
     html {
         font-size: 1rem;
+    }
+
+    main.frente:focus {
+        display: none;
     }
 
     main.verso {
@@ -232,11 +237,12 @@ footer:hover {
         grid-template-columns: 1fr 1fr;
         gap: 5px;
         padding: 0px;
+        min-height: 100px;
     }
 
     section {
         grid-area: 2 / 1;
-        width: 43ch;
+        width: 34ch;
         margin-top: 10px;
         border-left: var(--border);
         border-bottom: var(--border);
