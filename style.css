@@ -176,7 +176,7 @@ footer:hover {
 
 @media screen and (max-width: 1660px) {
     :root {
-        --frame-w: 425px;
+        --frame-w: 390px;
         --frame-h: 520px;
     }
 
